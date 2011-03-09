@@ -1,0 +1,22 @@
+GCC plugins: basic examples
+
+Vincent Rasneur <vrasneur@free.fr>
+
+Plugins are compiled and run using GCC v4.5.2
+
+Contents:
+* debug_tree.so : print the GENERIC AST for all the functions
+* find_goto.so : find goto statements
+* find_goto_cnt.so : find goto and continue statements
+* else_if.so : find missing else() in if()/else if()/else() constructs
+* recursive_fun.so : find recursive functions
+* uninit_vars.so : find uninitialized auto vars (at their declaration)
+* getchar_check.so : find getchar() calls which are casted to char
+* setjmp_check.so : find assignments of the setjmp() return value
+
+Compilation :
+1) replace GCC and GPP in Makefile by the location of gcc/g++
+2) run 'make'
+
+Testing :
+run 'make test'
